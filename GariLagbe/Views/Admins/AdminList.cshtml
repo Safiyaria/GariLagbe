@@ -1,0 +1,78 @@
+﻿@model IEnumerable<GariLagbe.Models.Admin>
+
+@{
+    ViewBag.Title = "AdminList";
+}
+
+<h2>AdminList</h2>
+
+
+<link href="~/Content/team.css" rel="stylesheet" />
+<link href="~/Content/adminbutton.css" rel="stylesheet" />
+
+<div class="containerX" style="margin-top:20px;">
+
+    <a class="card1" href="@Url.Action("AdminView", "Admins")">
+        <h3>Back To Home</h3>
+
+    </a>
+
+    <a class="card1" href="@Url.Action("Signup", "Admins")">
+        <h3>Add New Admin</h3>
+
+    </a>
+</div>
+
+<div class="tableX">
+    <table class="containerD" style="width:1140px;">
+        <thead>
+            <tr>
+                <th>
+                    <h1 style="color: #000000; margin-left:40px; font-family: Arial; font-size: 20px;">
+                        @Html.DisplayNameFor(model => model.Admin_Name)
+                    </h1>
+                </th>
+                <th>
+                    <h1 style="color: #000000; margin-left:40px; font-family: Arial; font-size: 20px;">
+                        @Html.DisplayNameFor(model => model.Admin_Email)
+                    </h1>
+                </th>
+                <th>
+                    <h1 style="color: #000000; margin-left:40px; font-family: Arial; font-size: 20px;">
+                        @Html.DisplayNameFor(model => model.Admin_PhoneNO)
+                    </h1>
+                </th>
+                <th>
+                    <h1 style="color: #000000; margin-left:40px; font-family: cursive; font-size: 20px;">
+                        @Html.DisplayNameFor(model => model.Admin_Address)
+                    </h1>
+                </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_PhoneNO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_Address)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Delete", "AdminDelete", new { id = item.Admin_ID })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

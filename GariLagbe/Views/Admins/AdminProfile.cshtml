@@ -1,0 +1,35 @@
+﻿@model GariLagbe.Models.Admin
+
+@{
+    ViewBag.Title = "AdminProfile";
+}
+
+<h2>AdminProfile</h2>
+
+<link href="~/Content/profile.css" rel="stylesheet" />
+
+<div class="wrapper">
+    <div class="profile-card js-profile-card">
+
+        <div class="profile-card__cnt js-profile-cnt">
+            <div class="profile-card__name">@Html.DisplayFor(model => model.Admin_Name)</div>
+            <div class="profile-card__txt">@Html.DisplayFor(model => model.Admin_Email)</div>
+            <div class="profile-card__txt">@Html.DisplayFor(model => model.Admin_PhoneNO)</div>
+            <div class="profile-card-loc">
+
+            </div>
+        </div>
+        <div>
+            <a href="@Url.Action("Edit", "Admins",new { id = Model.Admin_ID })" style="justify-content: center; text-align: center; float:left;">
+                <h3 style="background: #000000; height: 30px; width: 100px; border-radius: 10px; color: #808080; padding-left: 4px;">
+                    Edit
+                </h3>
+            </a>
+            <a href="@Url.Action("Delete", "Admins",new { id = Model.Admin_ID })" style="justify-content: center; text-align: center; float:right;">
+                <h3 style="background: #000000; height: 30px; width: 100px; border-radius: 10px; color: #808080;">
+                    Delete
+                </h3>
+            </a>
+        </div>
+    </div>
+</div>

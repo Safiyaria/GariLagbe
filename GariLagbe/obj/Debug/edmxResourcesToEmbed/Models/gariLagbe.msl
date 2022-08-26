@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="garilagbeModelStoreContainer" CdmEntityContainer="garilagbeEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="garilagbeModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Admin_ID" ColumnName="Admin_ID" />
+          <ScalarProperty Name="Admin_Name" ColumnName="Admin_Name" />
+          <ScalarProperty Name="Admin_Email" ColumnName="Admin_Email" />
+          <ScalarProperty Name="Admin_PhoneNO" ColumnName="Admin_PhoneNO" />
+          <ScalarProperty Name="Admin_Address" ColumnName="Admin_Address" />
+          <ScalarProperty Name="Admin_Password" ColumnName="Admin_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="garilagbeModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactUS">
+      <EntityTypeMapping TypeName="garilagbeModel.ContactU">
+        <MappingFragment StoreEntitySet="ContactUS">
+          <ScalarProperty Name="ContactUS_ID" ColumnName="ContactUS_ID" />
+          <ScalarProperty Name="ContactUS_Name" ColumnName="ContactUS_Name" />
+          <ScalarProperty Name="ContactUS_PhoneNo" ColumnName="ContactUS_PhoneNo" />
+          <ScalarProperty Name="ContactUS_Email" ColumnName="ContactUS_Email" />
+          <ScalarProperty Name="ContactUS_Message" ColumnName="ContactUS_Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="garilagbeModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+          <ScalarProperty Name="Customer_PhoneNO" ColumnName="Customer_PhoneNO" />
+          <ScalarProperty Name="Customer_Address" ColumnName="Customer_Address" />
+          <ScalarProperty Name="Customer_Password" ColumnName="Customer_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerStatus">
+      <EntityTypeMapping TypeName="garilagbeModel.CustomerStatu">
+        <MappingFragment StoreEntitySet="CustomerStatus">
+          <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Status_Time" ColumnName="Status_Time" />
+          <ScalarProperty Name="Satus_Date" ColumnName="Satus_Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderMs">
+      <EntityTypeMapping TypeName="garilagbeModel.OrderM">
+        <MappingFragment StoreEntitySet="OrderM">
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Vehicle_ID" ColumnName="Vehicle_ID" />
+          <ScalarProperty Name="Order_RentHour" ColumnName="Order_RentHour" />
+          <ScalarProperty Name="Order_FromLocation" ColumnName="Order_FromLocation" />
+          <ScalarProperty Name="Order_ToLocation" ColumnName="Order_ToLocation" />
+          <ScalarProperty Name="Order_TotalPrice" ColumnName="Order_TotalPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="garilagbeModel.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="Payment_ID" ColumnName="Payment_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Payment_Total" ColumnName="Payment_Total" />
+          <ScalarProperty Name="Payment_Advance" ColumnName="Payment_Advance" />
+          <ScalarProperty Name="Payment_Due" ColumnName="Payment_Due" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicles">
+      <EntityTypeMapping TypeName="garilagbeModel.Vehicle">
+        <MappingFragment StoreEntitySet="Vehicle">
+          <ScalarProperty Name="Vehicle_ID" ColumnName="Vehicle_ID" />
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+          <ScalarProperty Name="Vehicle_Name" ColumnName="Vehicle_Name" />
+          <ScalarProperty Name="Vehicle_LicenseNO" ColumnName="Vehicle_LicenseNO" />
+          <ScalarProperty Name="Vehicle_Status" ColumnName="Vehicle_Status" />
+          <ScalarProperty Name="Vehicle_Image" ColumnName="Vehicle_Image" />
+          <ScalarProperty Name="Vehicle_Engine" ColumnName="Vehicle_Engine" />
+          <ScalarProperty Name="Vehicle_Price" ColumnName="Vehicle_Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
