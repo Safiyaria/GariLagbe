@@ -7,11 +7,41 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+//namespace GariLagbe.Models
+//{
+//    using System;
+//    using System.Collections.Generic;
+
+//    public partial class OrderM
+//    {
+//        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+//        public OrderM()
+//        {
+//            this.Payments = new HashSet<Payment>();
+//        }
+
+//        public int Order_ID { get; set; }
+//        public int Customer_ID { get; set; }
+//        public int Vehicle_ID { get; set; }
+//        public Nullable<int> Order_RentHour { get; set; }
+//        public string Order_FromLocation { get; set; }
+//        public string Order_ToLocation { get; set; }
+//        public Nullable<double> Order_TotalPrice { get; set; }
+
+//        public virtual Customer Customer { get; set; }
+//        public virtual Vehicle Vehicle { get; set; }
+//        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+//        public virtual ICollection<Payment> Payments { get; set; }
+//    }
+//}
+
+
 namespace GariLagbe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class OrderM
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,15 +49,30 @@ namespace GariLagbe.Models
         {
             this.Payments = new HashSet<Payment>();
         }
-    
+
         public int Order_ID { get; set; }
+
+        [Display(Name = "Name")]
         public int Customer_ID { get; set; }
+
+        [Display(Name = "Vehicle Name")]
         public int Vehicle_ID { get; set; }
+
+        [Required(ErrorMessage = "Please enter duration!")]
+        [Display(Name = "Duration")]
         public Nullable<int> Order_RentHour { get; set; }
+
+        [Required(ErrorMessage = "Please enter from location!")]
+        [Display(Name = "From Location")]
         public string Order_FromLocation { get; set; }
+
+        [Required(ErrorMessage = "Please enter to location!")]
+        [Display(Name = "To Location")]
         public string Order_ToLocation { get; set; }
+
+        [Display(Name = "Total Amount")]
         public Nullable<double> Order_TotalPrice { get; set; }
-    
+
         public virtual Customer Customer { get; set; }
         public virtual Vehicle Vehicle { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

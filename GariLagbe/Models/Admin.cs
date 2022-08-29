@@ -11,14 +11,43 @@ namespace GariLagbe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class Admin
     {
         public int Admin_ID { get; set; }
+
+        [Required(ErrorMessage = "Please enter your full name")]
+        [Display(Name = "Full name")]
+        [StringLength(20, ErrorMessage = "Your name is too long!Max 20 Character")]
+
         public string Admin_Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address!")]
+        [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
+
         public string Admin_Email { get; set; }
+
+        [Display(Name = "Phone")]
+        [Required(ErrorMessage = "Please enter your phone number")]
+        [DataType(DataType.PhoneNumber)]
+
         public string Admin_PhoneNO { get; set; }
+
+        [Required(ErrorMessage = "Please enter your address")]
+        [Display(Name = "Address")]
+
         public string Admin_Address { get; set; }
+
+        [Required(ErrorMessage = "Please enter a password")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        [MaxLength(20, ErrorMessage = "Password must be within 20 characters")]
+        [MinLength(6, ErrorMessage = "Password must contain minimum 6 characters")]
+
         public string Admin_Password { get; set; }
     }
 }

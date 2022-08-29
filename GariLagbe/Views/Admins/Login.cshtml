@@ -30,7 +30,7 @@
             <div class="form-group">
                 <label>Password</label>
                 @Html.EditorFor(TempAdmin => TempAdmin.Admin_Password, new { htmlAttributes = new { @class = "form-control" }, @placeholder = "**********" })
-                @Html.ValidationMessageFor(TempAdmin => TempAdmin.Admin_Password, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(TempAdmin => TempAdmin.Admin_Password, "", new { @class = "text-danger", @type = "password" })
             </div>
 
 

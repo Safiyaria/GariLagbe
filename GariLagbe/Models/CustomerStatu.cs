@@ -11,13 +11,30 @@ namespace GariLagbe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class CustomerStatu
     {
         public int Status_ID { get; set; }
+
+        [Display(Name = "Name")]
         public int Customer_ID { get; set; }
+
+        [Display(Name = "Time")]
+        [Required]
+        [DataType(DataType.Time)]
+
         public string Status_Time { get; set; }
+
+        [Display(Name = "Date")]
+        [Required]
+        [DataType(DataType.Date)]
         public string Satus_Date { get; set; }
+
+        [Display(Name = "Phone")]
+        [Required(ErrorMessage = "Please enter your status!")]
+
         public string Status { get; set; }
     
         public virtual Customer Customer { get; set; }

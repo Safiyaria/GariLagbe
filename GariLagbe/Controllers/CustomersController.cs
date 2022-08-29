@@ -18,7 +18,7 @@ namespace GariLagbe.Controllers
             return View(db.Customers.ToList());
         }
 
-        // GET: Customers/Details
+        ///////////////////////////////////////////////////////////// GET: Customers/Details
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -56,7 +56,7 @@ namespace GariLagbe.Controllers
             return View(customer);
         }
 
-        // GET: Customers/Edit
+        ////////////////////////////////////////////////////////////////////////// GET: Customers/Edit
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,7 +78,7 @@ namespace GariLagbe.Controllers
         [ValidateAntiForgeryToken]
 
 
-        // GET: Customers/Delete/5
+        ///////////////////////////////////////////////////////////// GET: Customers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,9 +107,7 @@ namespace GariLagbe.Controllers
         }
 
 
-
-
-        //signup
+        ///////////////////////////////////////////////////////////////////////signup
         [HttpGet]
         public ActionResult SignUp()
         {
@@ -138,7 +136,7 @@ namespace GariLagbe.Controllers
 
 
 
-        //log in
+        //////////////////////////////////////////////////////////////////////log in
 
         [HttpGet]
         public ActionResult Login()
@@ -155,19 +153,22 @@ namespace GariLagbe.Controllers
                 var customer = db.Customers.Where(c => c.Customer_Name.Equals(tempCustomer.Customer_Name)
                                 && c.Customer_Email.Equals(tempCustomer.Customer_Email)
                                 && c.Customer_Password.Equals(tempCustomer.Customer_Password)).FirstOrDefault();
-
+                
                 if (customer != null)
-                {
-                    FormsAuthentication.SetAuthCookie(tempCustomer.Customer_Name, false);
+                { 
+                    FormsAuthentication.SetAuthCookie((string)tempCustomer.Customer_Name, false);
                     Session["CustomerName"] = customer.Customer_Name;
                     Session["CustomerEmail"] = customer.Customer_Email;
                     Session["type"] = "Customer";
-                    return RedirectToAction("CustomerProfile");
+                    return RedirectToAction("AdminView");
+                    //return RedirectToAction("", "Index");
                     //return Content("Login Successful!");
+
+
                 }
                 else
                 {
-                    ViewBag.Failed = "Login Faild! Please try again";
+                    ViewBag.Failed = "Login Failed! Please try again";
                     return View();
                 }
             }
@@ -217,7 +218,11 @@ namespace GariLagbe.Controllers
             return View(customer);
         }
 
-        // POST: Customers/Delete
+        /// <summary>
+        /// ////////////////////////////////////////////////////////////////POST: Customers/Delete
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult ADeleteConfirmed(int id)

@@ -11,7 +11,9 @@ namespace GariLagbe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,10 +24,37 @@ namespace GariLagbe.Models
         }
     
         public int Customer_ID { get; set; }
+
+        //[Required(ErrorMessage = "Please enter your name")]
+        //[Display(Name = "Name")]
+        //[StringLength(20, ErrorMessage = "Your name is too long!")]
+
         public string Customer_Name { get; set; }
+
+        //[Required(ErrorMessage = "Please enter your email address")]
+        //[EmailAddress(ErrorMessage = "Please enter a valid email address!")]
+        //[Display(Name = "Email")]
+        //[DataType(DataType.EmailAddress)]
+
         public string Customer_Email { get; set; }
+
+        //[Display(Name = "Phone")]
+        //[Required(ErrorMessage = "Please enter your phone number")]
+        //[DataType(DataType.PhoneNumber)]
+
         public string Customer_PhoneNO { get; set; }
+
+        //[Required(ErrorMessage = "Please enter your address")]
+        //[Display(Name = "Address")]
+
         public string Customer_Address { get; set; }
+
+        //[Required(ErrorMessage = "Please enter a password")]
+        //[DataType(DataType.Password)]
+        //[Display(Name = "Password")]
+        //[MaxLength(20, ErrorMessage = "Password must be within 20 characters")]
+        //[MinLength(6, ErrorMessage = "Password must contain minimum 6 characters")]
+
         public string Customer_Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

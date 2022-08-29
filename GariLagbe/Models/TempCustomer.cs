@@ -24,5 +24,12 @@ namespace GariLagbe.Models
         [MaxLength(20, ErrorMessage = "Password must be within 20 characters")]
         [MinLength(6, ErrorMessage = "Password must contain minimum 6 characters")]
         public string Customer_Password { get; set; }
+
+        [Required(ErrorMessage = "Please enter your phone number")]
+        public string Customer_PhoneNO { get; set; }
+
+        [Required(ErrorMessage = "Please enter your address")]
+        public string Customer_Address { get; set; }
+
     }
 }

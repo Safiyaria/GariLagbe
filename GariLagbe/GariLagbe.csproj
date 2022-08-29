@@ -129,8 +129,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\CustomerStatusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderMsController.cs" />
+    <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\VehiclesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,19 +183,39 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\addteam.css" />
     <Content Include="Content\adminbutton.css" />
     <Content Include="Content\adminlist.css" />
     <Content Include="Content\adminview.css" />
+    <Content Include="Content\background\a.jpg" />
+    <Content Include="Content\background\b.jpg" />
+    <Content Include="Content\background\c.jpg" />
+    <Content Include="Content\background\d.jpg" />
+    <Content Include="Content\background\e.jpg" />
+    <Content Include="Content\background\Enani.png" />
+    <Content Include="Content\background\f.png" />
+    <Content Include="Content\background\Himchori.png" />
+    <Content Include="Content\background\i.jpg" />
+    <Content Include="Content\background\j.jpg" />
+    <Content Include="Content\background\m.png" />
+    <Content Include="Content\background\SaintMartin.png" />
+    <Content Include="Content\background\Sonadia.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\indexslide.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\loginA.css" />
+    <Content Include="Content\news.css" />
+    <Content Include="Content\order.css" />
+    <Content Include="Content\placeadd.css" />
     <Content Include="Content\profile.css" />
+    <Content Include="Content\search.css" />
     <Content Include="Content\signup.css" />
     <Content Include="Content\signupA.css" />
     <Content Include="Content\team.css" />
+    <Content Include="Content\vehicle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -261,9 +286,48 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Login.cshtml" />
     <Content Include="Views\Customers\SignUp.cshtml" />
+    <Content Include="Views\Customers\CustomerDashboard.cshtml" />
+    <Content Include="Views\Vehicles\AllVehicle.cshtml" />
+    <Content Include="Views\Vehicles\AddVehicle.cshtml" />
+    <Content Include="Views\Vehicles\Index.cshtml" />
+    <Content Include="Views\Vehicles\Details.cshtml" />
+    <Content Include="Views\Vehicles\Create.cshtml" />
+    <Content Include="Views\Vehicles\Edit.cshtml" />
+    <Content Include="Views\Vehicles\Delete.cshtml" />
+    <Content Include="Views\Vehicles\AvailableVehicle.cshtml" />
+    <Content Include="Views\Vehicles\RentVehicle.cshtml" />
+    <Content Include="Views\Vehicles\Bike.cshtml" />
+    <Content Include="Views\Vehicles\Car.cshtml" />
+    <Content Include="Views\Vehicles\Jeep.cshtml" />
+    <Content Include="Views\Vehicles\MicroBus.cshtml" />
+    <Content Include="Views\OrderMs\Index.cshtml" />
+    <Content Include="Views\OrderMs\Create.cshtml" />
+    <Content Include="Views\OrderMs\Delete.cshtml" />
+    <Content Include="Views\OrderMs\Details.cshtml" />
+    <Content Include="Views\OrderMs\Edit.cshtml" />
+    <Content Include="Views\OrderMs\PaymentView.cshtml" />
+    <Content Include="Views\Payments\Create.cshtml" />
+    <Content Include="Views\Payments\Delete.cshtml" />
+    <Content Include="Views\Payments\Edit.cshtml" />
+    <Content Include="Views\Payments\Details.cshtml" />
+    <Content Include="Views\Payments\Index.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Categories\Delete.cshtml" />
+    <Content Include="Views\Categories\CategoryList.cshtml" />
+    <Content Include="Views\Categories\AddCategory.cshtml" />
+    <Content Include="Views\CustomerStatus\Index.cshtml" />
+    <Content Include="Views\CustomerStatus\Create.cshtml" />
+    <Content Include="Views\CustomerStatus\Edit.cshtml" />
+    <Content Include="Views\CustomerStatus\Delete.cshtml" />
+    <Content Include="Views\CustomerStatus\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="image\" />
+    <Folder Include="VehicleImage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

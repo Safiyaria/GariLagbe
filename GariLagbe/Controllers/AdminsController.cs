@@ -195,7 +195,7 @@ namespace GariLagbe.Controllers
                     {
 
 
-                        ViewBag.Failed = "Login Faild! Please try again";
+                        ViewBag.Failed = "Login Failed! Please try again";
                         return View();
 
                     }

@@ -11,13 +11,25 @@ namespace GariLagbe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Payment
     {
         public int Payment_ID { get; set; }
+
+        [Display(Name = "Order_ID")]
         public int Order_ID { get; set; }
+
+
+        [Required(ErrorMessage = "Please enter total amount")]
+        [Display(Name = "Total")]
+
         public Nullable<double> Payment_Total { get; set; }
+
+        [Display(Name = "Advance")]
+
         public Nullable<double> Payment_Advance { get; set; }
+        [Display(Name = "Due")]
         public Nullable<double> Payment_Due { get; set; }
     
         public virtual OrderM OrderM { get; set; }

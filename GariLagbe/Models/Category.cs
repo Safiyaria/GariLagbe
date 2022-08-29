@@ -11,7 +11,9 @@ namespace GariLagbe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +23,10 @@ namespace GariLagbe.Models
         }
     
         public int Category_ID { get; set; }
+
+        [Required(ErrorMessage = "Please enter category name!")]
+        [Display(Name = "Category Name")]
+
         public string Category_Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

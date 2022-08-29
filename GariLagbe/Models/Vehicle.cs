@@ -7,11 +7,42 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+//namespace GariLagbe.Models
+//{
+//    using System;
+//    using System.Collections.Generic;
+    
+//    public partial class Vehicle
+//    {
+//        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+//        public Vehicle()
+//        {
+//            this.OrderMs = new HashSet<OrderM>();
+//        }
+    
+//        public int Vehicle_ID { get; set; }
+//        public int Category_ID { get; set; }
+//        public string Vehicle_Name { get; set; }
+//        public int Vehicle_LicenseNO { get; set; }
+//        public string Vehicle_Status { get; set; }
+//        public string Vehicle_Image { get; set; }
+//        public string Vehicle_Engine { get; set; }
+//        public Nullable<double> Vehicle_Price { get; set; }
+    
+//        public virtual Category Category { get; set; }
+//        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+//        public virtual ICollection<OrderM> OrderMs { get; set; }
+//        public object VehicleImageFile { get; internal set; }
+//    }
+//}
+
 namespace GariLagbe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
     public partial class Vehicle
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,18 +50,49 @@ namespace GariLagbe.Models
         {
             this.OrderMs = new HashSet<OrderM>();
         }
-    
+
         public int Vehicle_ID { get; set; }
+
+        [Required(ErrorMessage = "Please enter category name!")]
+        [Display(Name = "Category Name")]
+
         public int Category_ID { get; set; }
+
+        [Required(ErrorMessage = "Please enter vehicle name!")]
+        [Display(Name = "Vehicle Name")]
+
         public string Vehicle_Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter vehicle license no!")]
+        [Display(Name = "License No")]
+
         public int Vehicle_LicenseNO { get; set; }
+
+        [Required(ErrorMessage = "Please enter vehicle Status!")]
+        [Display(Name = "Vehicle Status")]
+
         public string Vehicle_Status { get; set; }
+
+        [Display(Name = "Vehicle Image")]
+
         public string Vehicle_Image { get; set; }
+
+        [Required(ErrorMessage = "Please enter vehicle engine name!")]
+        [Display(Name = "Vehicle Engine")]
+
         public string Vehicle_Engine { get; set; }
+
+        [Display(Name = "Rent Price")]
+
         public Nullable<double> Vehicle_Price { get; set; }
-    
+        public HttpPostedFileBase VehicleImageFile { get; set; }
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderM> OrderMs { get; set; }
+
+        internal static object ToList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
