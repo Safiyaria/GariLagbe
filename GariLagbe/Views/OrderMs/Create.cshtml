@@ -6,7 +6,22 @@
     var failed = ViewBag.Failed;
 }
 
+
+<link href="~/Content/adminbutton.css" rel="stylesheet" />
 <link href="~/Content/search.css" rel="stylesheet" />
+
+
+<div class="containerX" style="margin-top:20px;">
+    <a class="card1" href="@Url.Action("CustomersDashboard", "Customers")">
+        <h3>Back To Dashboard</h3>
+
+    </a>
+    @*<a class="card1" href="@Url.Action("AdminList", "Admins")">
+        <h3>See All Admin</h3>
+
+    </a>*@
+</div>
+
 
 @using (Html.BeginForm())
 {

@@ -26,17 +26,13 @@
         <thead>
             <tr>
                 <th>
-                    <h1 style="color: #3BFD0B; margin-left:40px; font-family: cursive; font-size: 20px;">
+                    <h1 style="color: #000000; margin-left: 40px; font-family: cursive; font-size: 20px;">
                         @Html.DisplayNameFor(model => model.Category_Name)
                     </h1>
                 </th>
-                @*<th>
-                    <h1 style="color: #3BFD0B; margin-left:40px; font-family: cursive; font-size: 20px;">
-                        @Html.DisplayNameFor(model => model.Category_Image)
-                    </h1>
-                </th>*@
+               
                 <th style="width: 180px;">
-                    <h1 style="color: #3BFD0B; font-family:cursive; font-size:20px;">
+                    <h1 style="color: #000000; font-family: cursive; font-size: 20px;">
                         Controll
                     </h1>
                 </th>
@@ -49,13 +45,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Category_Name)
                     </td>
-                    @*<td>
-                        @if (item.Category_Image != null)
-                        {
-                            var imgPath = item.Category_Image;
-                            <img src="@Url.Content(imgPath)" alt="profile card" style="width:20%; height:20%;">
-                        }
-                    </td>*@
+                   
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.Category_ID }) |
                         @Html.ActionLink("Details", "Details", new { id = item.Category_ID }) |

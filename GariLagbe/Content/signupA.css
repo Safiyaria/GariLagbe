@@ -24,6 +24,7 @@ a,
     border-top: 8px solid #298977;
     border-bottom: 8px solid #298977;
     box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 0.86);
+    text-align: center;
 }
 
 .signup__overlay {
@@ -38,10 +39,10 @@ a,
 }
 
 .container__child {
-    width: 50%;
+    width: 100%;
     height: 100%;
     font-family: cursive;
-    background-image: url('rent/rent.png');
+
 }
 
 .signup__thumbnail {

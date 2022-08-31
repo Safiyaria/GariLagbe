@@ -187,19 +187,6 @@
     <Content Include="Content\adminbutton.css" />
     <Content Include="Content\adminlist.css" />
     <Content Include="Content\adminview.css" />
-    <Content Include="Content\background\a.jpg" />
-    <Content Include="Content\background\b.jpg" />
-    <Content Include="Content\background\c.jpg" />
-    <Content Include="Content\background\d.jpg" />
-    <Content Include="Content\background\e.jpg" />
-    <Content Include="Content\background\Enani.png" />
-    <Content Include="Content\background\f.png" />
-    <Content Include="Content\background\Himchori.png" />
-    <Content Include="Content\background\i.jpg" />
-    <Content Include="Content\background\j.jpg" />
-    <Content Include="Content\background\m.png" />
-    <Content Include="Content\background\SaintMartin.png" />
-    <Content Include="Content\background\Sonadia.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -216,6 +203,8 @@
     <Content Include="Content\signupA.css" />
     <Content Include="Content\team.css" />
     <Content Include="Content\vehicle.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -250,6 +239,18 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="VehicleImage\Bajaj_Avenger.png" />
+    <Content Include="VehicleImage\Hyundai.png" />
+    <Content Include="VehicleImage\Maruti_Omni.png" />
+    <Content Include="VehicleImage\Mercedes_Benz.png" />
+    <Content Include="VehicleImage\Mitsubishi_Lancer.png" />
+    <Content Include="VehicleImage\Nissan_BlueBird.png" />
+    <Content Include="VehicleImage\Suzuki_Wagon.png" />
+    <Content Include="VehicleImage\Toyota-Noah.png" />
+    <Content Include="VehicleImage\Toyota_AXIO_Hybrid.png" />
+    <Content Include="VehicleImage\Toyota_Land_Cruiser.png" />
+    <Content Include="VehicleImage\Toyota_Noah.png" />
+    <Content Include="VehicleImage\Toyota_Premio.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -286,7 +287,6 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Login.cshtml" />
     <Content Include="Views\Customers\SignUp.cshtml" />
-    <Content Include="Views\Customers\CustomerDashboard.cshtml" />
     <Content Include="Views\Vehicles\AllVehicle.cshtml" />
     <Content Include="Views\Vehicles\AddVehicle.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
@@ -327,7 +327,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="image\" />
-    <Folder Include="VehicleImage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

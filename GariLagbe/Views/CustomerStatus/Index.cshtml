@@ -6,6 +6,9 @@
 
 <h2>Index</h2>
 
+<link href="~/Content/signupA.css" rel="stylesheet" />
+<link href="~/Content/adminbutton.css" rel="stylesheet" />
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -17,7 +20,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Satus_Date)
         </th>
-        
+
         <th>
             @Html.DisplayNameFor(model => model.Status)
         </th>
@@ -36,7 +39,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Satus_Date)
             </td>
-            
+
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>

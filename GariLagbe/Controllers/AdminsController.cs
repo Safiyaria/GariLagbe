@@ -21,7 +21,7 @@ namespace GariLagbe.Controllers
             return View(db.Admins.ToList());
         }
 
-        // GET: Admins/Details/5
+        ///////////////////////////////// GET: Admins/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,7 +36,7 @@ namespace GariLagbe.Controllers
             return View(admin);
         }
 
-        // GET: Admins/Create
+        /////////////////////////////////////////////// GET: Admins/Create
         public ActionResult Create()
         {
             return View();
@@ -59,7 +59,11 @@ namespace GariLagbe.Controllers
             return View(admin);
         }
 
-        // GET: Admins/Edit/5
+        /// <summary>
+        /// ///////////////////////////////////////////////////////////GET: Admins/Edit/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -98,7 +102,11 @@ namespace GariLagbe.Controllers
             return View(adm);
         }
 
-        // GET: Admins/Delete/5
+        /// <summary>
+        /// /////////////////////////////////////////////GET: Admins/Delete/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -130,7 +138,10 @@ namespace GariLagbe.Controllers
         }
 
 
-
+        /// <summary>
+        /// /////////////////////////////////signup
+        /// </summary>
+        /// <returns></returns>
 
         [HttpGet]
         public ActionResult Signup()
@@ -176,31 +187,39 @@ namespace GariLagbe.Controllers
         {
             using (garilagbeEntities db = new garilagbeEntities())
             {
-                if (ModelState.IsValid)
-                {
-                    var admin = db.Admins.Where(c => c.Admin_Name.Equals(tempAdmin.Admin_Name)
-                            && c.Admin_Email.Equals(tempAdmin.Admin_Email)
-                            && c.Admin_Password.Equals(tempAdmin.Admin_Password)).FirstOrDefault();
+                var admin = db.Admins.Where(c => c.Admin_Name.Equals(tempAdmin.Admin_Name)
+                           && c.Admin_Email.Equals(tempAdmin.Admin_Email)
+                           && c.Admin_Password.Equals(tempAdmin.Admin_Password)).FirstOrDefault();
 
-                    if (admin != null)
+                
+                    if (admin == null)
                     {
-                        FormsAuthentication.SetAuthCookie((string)tempAdmin.Admin_Name, false);
-                        Session["AdminName"] = admin.Admin_Name;
-                        Session["AdminEmail"] = admin.Admin_Email;
-                        Session["type"] = "Admin";
-                        return RedirectToAction("AdminView");
-
-                    }
-                    else
-                    {
+                    //FormsAuthentication.SetAuthCookie((string)tempAdmin.Admin_Name, false);
+                    //Session["AdminName"] = admin.Admin_Name;
+                    //Session["AdminEmail"] = admin.Admin_Email;
+                    //Session["type"] = "Admin";
+                    //return RedirectToAction("AdminView");
 
 
-                        ViewBag.Failed = "Login Failed! Please try again";
-                        return View();
+                    tempAdmin.LoginErrorMessage = "wrong email or password";
+                    return View("AdminLogin", tempAdmin);
 
-                    }
+
                 }
-                return View();
+                else
+                    {
+
+
+                        //ViewBag.Failed = "Login Failed! Please try again";
+                        //return View();
+
+                    Session["AdminSessionEmail"] = admin.Admin_Name;
+
+                    return RedirectToAction("AdminView");
+
+
+                }
+
             }
 
         }

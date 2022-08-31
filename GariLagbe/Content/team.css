@@ -5,7 +5,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     line-height: 1.42em;
-    color: #185875;
+    color: #e9edf0;
 }
 
 .tableX .blue {
@@ -13,22 +13,22 @@ body {
 }
 
 .yellow {
-    color: #2C3446;
+    color: #3f4961;
 }
 
 .tableX .containerD th h1 {
     font-weight: bold;
     font-size: 1em;
     text-align: left;
-    color: #185875;
+    color: #e9edf0;
 }
 
 .tableX .containerD td {
     font-weight: normal;
     font-size: 1em;
-    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-    -moz-box-shadow: 0 2px 2px -2px #0E1119;
-    box-shadow: 0 2px 2px -2px #0E1119;
+    -webkit-box-shadow: 0 2px 2px -2px #e9edf0;
+    -moz-box-shadow: 0 2px 2px -2px #e9edf0;
+    box-shadow: 0 2px 2px -2px #e9edf0;
 }
 
 .tableX .containerD {
@@ -57,25 +57,25 @@ body {
     }
 
     .tableX .containerD th {
-        background-color: #48536b;
+        background-color: #e9edf0;
     }
 
     .tableX .containerD td:first-child {
-        color: #8e63ba;
+        color: #ece9f0;
     }
 
     .tableX .containerD tr:hover {
-        background-color: #464A52;
-        -webkit-box-shadow: 0 6px 6px -6px #3d455c;
-        -moz-box-shadow: 0 6px 6px -6px #3d455c;
-        box-shadow: 0 6px 6px -6px #3d455c;
+        background-color: #515a75;
+        -webkit-box-shadow: 0 6px 6px -6px #515a75;
+        -moz-box-shadow: 0 6px 6px -6px #515a75;
+        box-shadow: 0 6px 6px -6px #515a75;
     }
 
     .tableX .containerD td:hover {
-        background-color: #b567f5;
-        color: #5c3a8a;
+        background-color: #606d87;
+        color: #606d87;
         font-weight: bold;
-        box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+        box-shadow: #7F7C21 -1px 1px, #f0efce -2px 2px, #f0efce -3px 3px, #7F7C21 -4px 4px, #f0efce -5px 5px, #7F7C21 -6px 6px;
         transform: translate3d(6px, -6px, 0);
         transition-delay: 0s;
         transition-duration: 0.4s;

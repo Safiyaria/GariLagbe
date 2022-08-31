@@ -24,5 +24,7 @@ namespace GariLagbe.Models
         [MaxLength(20, ErrorMessage = "Password must be within 20 characters")]
         [MinLength(6, ErrorMessage = "Password must contain minimum 6 characters")]
         public string Admin_Password { get; set; }
+
+        public string LoginErrorMessage { get; set; }
     }
 }

@@ -34,6 +34,7 @@ namespace GariLagbe.Models
         [Display(Name = "Phone")]
         [Required(ErrorMessage = "Please enter your phone number")]
         [DataType(DataType.PhoneNumber)]
+        [MaxLength(11, ErrorMessage = "Phone Number is invalid")]
 
         public string Admin_PhoneNO { get; set; }
 
@@ -42,12 +43,14 @@ namespace GariLagbe.Models
 
         public string Admin_Address { get; set; }
 
-        [Required(ErrorMessage = "Please enter a password")]
+        [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         [MaxLength(20, ErrorMessage = "Password must be within 20 characters")]
         [MinLength(6, ErrorMessage = "Password must contain minimum 6 characters")]
 
         public string Admin_Password { get; set; }
+
+        public string LoginErrorMessage { get; set; }
     }
 }

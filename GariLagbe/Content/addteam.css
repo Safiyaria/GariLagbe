@@ -24,7 +24,7 @@ a,
     border-top: 8px solid #298977;
     border-bottom: 8px solid #298977;
     box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 0.86);
-    background-image: url('logo/noucamp.jpg');
+  
 }
 
 .signup__overlay {
@@ -42,7 +42,7 @@ a,
     width: 50%;
     height: 100%;
     font-family: cursive;
-    background-image: url('logo/footballlogo.jpg');
+   
 }
 
 .signup__thumbnail {
@@ -80,13 +80,13 @@ h2 {
     padding: 2.5rem;
     align-items: center;
     justify-content: center;
-    background: #C7FEB6;
+    background: #9ba5d1;
 }
 
 label {
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: #2E8313;
+    color: #0b4663;
 }
 
 .form-control {
@@ -98,7 +98,7 @@ label {
 }
 
     .form-control :focus {
-        border-color: #02B157;
+        border-color: #2494bd;
     }
 
 [type="text"] {
@@ -138,7 +138,7 @@ label {
 }
 
 li {
-    color: #2E8313;
+    color: #201387;
 }
 
 .signup__link :focus,
